@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import styled from 'styled-components';
-import Nav from './Nav';
+import Link from 'next/link'
+import styled from 'styled-components'
+import Nav from './Nav'
 
 const Logo = styled.h1`
 	font-size: 4rem;
@@ -15,7 +15,7 @@ const Logo = styled.h1`
 		text-transform: uppercase;
 		padding: 0.5rem 1rem;
 	}
-`;
+`
 
 const HeaderStyles = styled.header`
 	.bar {
@@ -23,7 +23,7 @@ const HeaderStyles = styled.header`
 		display: grid;
 		grid-template-columns: auto 1fr;
 		justify-content: space-between;
-		align-items: center;
+		align-items: stretch;
 	}
 
 	.sub-bar {
@@ -31,7 +31,7 @@ const HeaderStyles = styled.header`
 		display: grid;
 		grid-template-columns: auto 1fr;
 	}
-`;
+`
 
 export default function Header() {
 	return (
@@ -40,11 +40,11 @@ export default function Header() {
 				<Logo>
 					<Link href='/'>Sick Fits</Link>
 				</Logo>
+				<Nav />
 			</div>
 			<div className='sub-bar'>
 				<p>Search</p>
 			</div>
-			<Nav />
 		</HeaderStyles>
-	);
+	)
 }
